@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Question adding</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="create.css">
+    
+  </head>
+  <body>
+    <div class="testbox">
+      <form action="/makequiz:0" method="post">
+        <div class="banner">
+          <h1>Create Quiz</h1>
+        </div>
+        <div class="item">
+          <label for="name">Title<span>*</span></label>
+          <input id="name" type="text" name="title" required/>
+        </div>
+
+        <div class="item">
+            <label for="name">Question<span>*</span></label>
+            <input type="text" name="question" id="question" placeholder="Question statement" required>
+        </div>
+        <div class="item">
+            <label for="name">Option 1<span>*</span></label>
+            <input type="checkbox" name="answer1" >
+            <input type="text" name="option1"  placeholder="Second option" required>
+        
+        </div>
+        <div class="item">
+            <label for="name">Option 2<span>*</span></label>
+            <input type="checkbox" name="answer2" >
+            <input type="text" name="option2"  placeholder="Second option" required>
+        </div>
+        <div class="item">
+            <label for="name">Option 3<span>*</span></label>
+            <input type="checkbox" name="answer3" >
+            <input type="text" name="option3"  placeholder="Second option" required>
+        </div>
+        <div class="item">
+            <label for="name">Option 4<span>*</span></label>
+            <input type="checkbox" name="answer4" >
+            <input type="text" name="option4"  placeholder="Second option" required>
+        </div>
+        
+        <div class="item">
+            <label for="bdate">Quiz start date<span>*</span></label>
+            <input type="date" name="startDate" id="startDate" value="<%- new Date()%>">
+            <i class="fas fa-calendar-alt"></i>
+        </div>
+        <div class="item">
+            <label for="bdate">Quiz end date<span>*</span></label>
+            <input type="date" name="endDate" id="endDate" value="<%- new Date()%>">
+            <i class="fas fa-calendar-alt"></i>
+        </div>
+        <div class="item">
+            <label for="name">Score<span>*</span></label>
+            <input type="number" name="score" id="score" placeholder="Second option" required>
+        </div>
+        <div class="item">
+            <label for="name">Time allocation<span>*</span></label>
+            <input type="text" name="timer" id="timer" placeholder="Second option" required>
+        </div>
+        <p style="text-align: center">
+            <input type="checkbox" value="true" name="mcq" id="mcq">
+            Is Multicorrect 
+        </p>
+            
+
+
+        <div class="btn-block">
+          <button type="submit" >Add Question</button>
+        </div>
+      </form>
+    </div>
+  </body>
+
+
+</html>
+<body>
+    
+    

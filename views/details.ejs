@@ -1,0 +1,113 @@
+<%- include('partials/header') %>
+
+  <head>
+    <link rel="stylesheet" href="/blog.css">
+  </head>
+
+  <head>
+    <title>Details</title>
+    <link rel="stylesheet" href="/read.css">
+    <style>
+      .right {
+        position: absolute;
+        right: 10px;
+        /* width: 300px; */
+        border: 3px solid #73AD21;
+        padding: 10px;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+
+  <div class="faq-header" >
+    <%=title+' Submitted by '+ username%>
+  </div>
+<div class="faq-content">
+  
+  <% for(let i in details){ %>
+    <div class="faq-question">
+      <input id="q<%-Number(i)+1%>" type="checkbox" class="panel">
+      <div class="plus">+</div>
+      <label for="q<%-Number(i)+1%>" class="panel-title"><%= (Number(i)+1) +": "+ details[i].question %></label>
+      <div class="panel-content">
+
+        <div class="card-body col-12 col-sm-12 col-md-12 col-lg-6" style="display: inline-block;">
+          
+          <p style="padding: 10px; background-color: rgb(228, 244, 238); <% if(details[i].option1[1]) {%>
+            background-color: green;
+            <% } if(details[i].answer1){%>
+                color:red;
+                <%}%>" class="card-text">
+              <b>Option 1:</b>
+              <%= details[i].option1[0] %>
+          </p>
+
+          <p style=" padding: 10px; background-color: rgb(228, 244, 238); <% if(details[i].option2[1]) {%>
+            background-color: green;
+            <% } if(details[i].answer2){%>
+                color:red;
+                <%}%>" class="card-text">
+                <b>Option 2:</b>
+              
+                <%= details[i].option2[0] %>
+
+          </p>
+          <p style=" padding: 10px; background-color: rgb(228, 244, 238); <% if(details[i].option3[1]) {%>
+            background-color: green;
+            <% } if(details[i].answer3){%>
+                color:red;
+                <%}%>" class="card-text">
+                <b>Option 3:</b>
+                <%= details[i].option3[0] %>
+          </p>
+          <p style=" padding: 10px; background-color: rgb(228, 244, 238); <% if(details[i].option4[1]) {%>
+            background-color: green;
+            <% } if(details[i].answer4){%>
+                color:red;
+                <%}%>"  class="card-text" >
+                <b>Option 4:</b>
+                <%=  details[i].option4[0] %>
+          </p>
+        </div>
+
+        <div class="card-body col-12 col-sm-12 col-md-12 col-lg-5" style="display: inline-block; text-align: center;" >
+          
+          <p style="padding: 10px; background-color: rgb(120, 170, 187); " class="card-text">
+            Average time : <%=  details[i].avg_time %>
+          </p>
+          <p style="padding: 10px; background-color: rgb(120, 170, 187); " class="card-text">
+            Average score : <%=  details[i].avg_score %></p>
+                 
+          </p>
+          <p style="padding: 10px; background-color: rgb(120, 170, 187); " class="card-text">
+            Time taken: <%=  details[i].time %></p>
+                           
+          </p>
+          <p style="padding: 10px; background-color: rgb(120, 170, 187); " class="card-text">
+            Score get: <%=  details[i].score %></p>
+                     
+          </p>
+
+      </div>
+
+      </div>
+    </div>
+  <%}%>
+  
+</div>
+
+
+          <script>
+            function myFunction() {
+              var copyText = document.getElementById("myInput");
+              copyText.select();
+              copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+              navigator.clipboard.writeText(copyText.value);
+
+              /* Alert the copied text */
+              alert("Copied the text: " + copyText.value);
+            }
+          </script>
+
+   
