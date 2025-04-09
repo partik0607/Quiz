@@ -8,8 +8,7 @@ const req = require("express/lib/request");
 const { appendFile } = require("fs");
 const port =process.env.PORT || 3000;
 
-const pass="punitQuiz";
-const MONGODB_URI="mongodb+srv://punit:punitQuiz@cluster0.xi7p7.mongodb.net/?retryWrites=true&w=majority";
+const MONGODB_URI="mongodb+srv://partiksehrawat06:U83P3O09OTRvMSEo@cluster0.dm62kio.mongodb.net/?retryWrites=true&w=majority";
 
 const app=express();
 
